@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.lxy.zhaopin.myview.TopBarView
+        android:id="@+id/wjl_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </com.lxy.zhaopin.myview.TopBarView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="姓名"
+            android:textSize="16sp"
+            android:textColor="@color/smssdk_black"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"/>
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/smssdk_black"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:hint="请输入姓名"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="1dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="简历名"
+            android:textSize="16sp"
+            android:textColor="@color/smssdk_black"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"/>
+
+        <EditText
+            android:id="@+id/et_jlm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/smssdk_black"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:hint="请输入简历名"
+            />
+
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_marginTop="1dp">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="出生日期"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textColor="@color/smssdk_black"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:layout_marginLeft="20dp"/>-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/et_bir"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:textColor="@color/smssdk_black"-->
+            <!--android:textSize="16sp"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:hint="请输入出生日期"-->
+            <!--/>-->
+
+    <!--</LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:text="学历"
+            android:textColor="@color/smssdk_black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_education"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:hint="请输入学历"
+            android:textColor="@color/smssdk_black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="1dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号"
+            android:textSize="16sp"
+            android:textColor="@color/smssdk_black"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"/>
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/smssdk_black"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:hint="请输入手机号"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="1dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="邮箱"
+            android:textSize="16sp"
+            android:textColor="@color/smssdk_black"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"/>
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/smssdk_black"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:hint="请输入邮箱"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="1dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="期望职位"
+            android:textSize="16sp"
+            android:textColor="@color/smssdk_black"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"/>
+
+        <EditText
+            android:id="@+id/et_want"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/smssdk_black"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:hint="请输入期望职位"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="1dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最低工资"
+            android:textSize="16sp"
+            android:textColor="@color/smssdk_black"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"/>
+
+        <EditText
+            android:id="@+id/et_min"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/smssdk_black"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:hint="请输入最低工资"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="1dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最高工资"
+            android:textSize="16sp"
+            android:textColor="@color/smssdk_black"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"/>
+
+        <EditText
+            android:id="@+id/et_max"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/smssdk_black"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:hint="请输入最高工资"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="1dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="期望城市"
+            android:textSize="16sp"
+            android:textColor="@color/smssdk_black"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"/>
+
+        <EditText
+            android:id="@+id/et_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/smssdk_black"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:hint="请输入期望城市"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="1dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="工作经验"
+            android:textSize="16sp"
+            android:textColor="@color/smssdk_black"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"/>
+
+        <EditText
+            android:id="@+id/et_ex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/smssdk_black"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:hint="请输入工作经验"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+        android:text="保存"/>
+
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#30cfbf</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="background_black">#26292c</color>
+    <color name="background_white">#FFFFFF</color>
+    <color name="phone_confirm_bg">#313438</color>
+    <color name="top_black">#212622</color>
+    //个人中心背景
+    <color name="background_mine">#2a302c</color>
+    <color name="background_mine_press">#565555</color>
+    <color name="mine_text_color">#717f7e</color>
+    <color name="mine_text_blue">#4fbb44</color>
+    <color name="mine_text_blue_70">#7030cfbf</color>
+    <color name="mine_text_yellow">#ffde29</color>
+    <color name="order_bike_prey_line">#788286</color>
+    <color name="real_white">#ffffff</color>
+    <color name="mine_gray">#929199</color>
+    //用户指南
+    <color name="mine_guide_back">#313438</color>
+    <color name="mine_guide_item_back">#26292c</color>
+    <color name="mine_guide_item_text_color">#717f7e</color>
+
+
+    <color name="info_tv_color">#63696a</color>
+
+    <color name="real_red">#ff2b2b</color>
+    <color name="loding">#90929199</color>
+
+</resources>

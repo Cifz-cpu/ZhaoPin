@@ -1,0 +1,82 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="tab_top_height">50dp</dimen>
+    <dimen name="margin_left">16.8dp</dimen>
+
+    //字体大小
+    <dimen name="ten_size">10sp</dimen>
+    <dimen name="twelve_size">12sp</dimen>
+    <dimen name="foreth_size">14sp</dimen>
+    <dimen name="sixth_size">16sp</dimen>
+    <dimen name="eighth_size">18sp</dimen>
+    <dimen name="twenty_size">20sp</dimen>
+    <dimen name="twenty_two_size">22sp</dimen>
+
+
+
+    //首页地图
+    <dimen name="notice_margin_top">5dp</dimen>
+    <dimen name="margin_bottom">20dp</dimen>
+    <dimen name="order_bike_address_height">34.4dp</dimen>
+    <dimen name="order_bike_address_tv_margin_top">14.4dp</dimen>
+    <dimen name="order_bike_address_img_margin_top">10dp</dimen>
+    <dimen name="order_bike_dis_tv_mar_left">7.5dp</dimen>
+    <dimen name="order_bike_dis_mar_top">10dp</dimen>
+    
+    
+    //个人中心
+    <dimen name="mine_menu_height">44dp</dimen>
+    <dimen name="mine_menu_margin_left">18dp</dimen>
+    <dimen name="mine_menu_margin_right">22dp</dimen>
+    <dimen name="mine_background_height">330dp</dimen>
+    <dimen name="mine_back_left">12dp</dimen>
+    <dimen name="mine_back_top">25dp</dimen>
+    <dimen name="mine_pager_left">70dp</dimen>
+
+    <dimen name="state_mar_top">40dp</dimen>
+    <dimen name="number_mar_top">150dp</dimen>
+    <dimen name="et_number_mar_left">51dp</dimen>
+    <dimen name="start_mar_top">36dp</dimen>
+    //扫描二维码
+    <dimen name="bike_mar_top">36.4dp</dimen>
+    <dimen name="scan_tip_mar_top">140dp</dimen>
+
+
+    //用户指南
+    <dimen name="mine_guide_margin_top">10dp</dimen>
+    <dimen name="mine_guide_line_width">310dp</dimen>
+    <dimen name="mine_guide_line_height">1dp</dimen>
+    <dimen name="mine_guide_item_margin_top">15dp</dimen>
+
+    <dimen name="mine_circle">98dp</dimen>
+    <dimen name="mine_edit_margin_top">10dp</dimen>
+
+    <dimen name="bike_stop_padding">11dp</dimen>    <!--蓝色圆角按钮高与宽-->
+    <dimen name="button_blue_width">317dp</dimen>
+    <dimen name="button_blue_height">42dp</dimen>
+
+    <!--行程结束-->
+    <dimen name="bike_stop_mar">11dp</dimen>
+    <dimen name="up_height">200dp</dimen>
+    <dimen name="stop_money_mar_top">27.4dp</dimen>
+    <dimen name="stop_money_padding">5dp</dimen>
+    <dimen name="tv_stop_money_mar_top">24dp</dimen>
+    <dimen name="coupon_pay_mar_top">45.6dp</dimen>
+
+    <!--我的代金券-->
+    <dimen name="coupon_search_martop">24dp</dimen>
+    <dimen name="coupon_exchange">16.8dp</dimen>
+    <dimen name="coupon_mar_left">12dp</dimen>
+
+    <!--退款dialog-->
+    <dimen name="dialog_padding">15dp</dimen>
+    <dimen name="dialog_text_size">15sp</dimen>
+    
+    <!--信用分获取-->
+    <dimen name="pic_ll_mar_top">11dp</dimen>
+    <dimen name="tv_upload_pic_mar_top">20dp</dimen>
+    <dimen name="score_mar_left">25.5dp</dimen>
+
+</resources>
