@@ -3,7 +3,16 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#87CEEB">
+    android:background="#FFF">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="招聘信息管理系统"
+        android:layout_gravity="center_horizontal"
+        android:textSize="24sp"
+        android:textColor="@color/smssdk_black"
+        android:layout_marginTop="100dp"/>
 
     <LinearLayout
         android:layout_width="wrap_content"

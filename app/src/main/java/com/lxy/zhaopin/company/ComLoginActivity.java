@@ -1,5 +1,6 @@
 package com.lxy.zhaopin.company;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -45,6 +46,7 @@ public class ComLoginActivity extends BaseActivity {
     Button btnLogin;
     @BindView(R.id.btn_regist)
     Button btnRegist;
+    ProgressDialog dialog;
 
     @Override
     protected int getLayoutResId() {
@@ -53,7 +55,10 @@ public class ComLoginActivity extends BaseActivity {
 
     @Override
     protected void initView(Bundle bundle) {
-
+        dialog = new ProgressDialog(this);
+        dialog.setMessage("正在登录请稍后");
+        dialog.setCancelable(false);
+        dialog.create();
     }
 
     @OnClick({R.id.btn_login, R.id.btn_regist})
@@ -85,6 +90,7 @@ public class ComLoginActivity extends BaseActivity {
     }
 
     private void comLogin(String name, String psw) {
+        dialog.show();
         Map<String,String> map = new HashMap<>();
         map.put("telPhone",name);
         map.put("password",psw);
@@ -99,6 +105,7 @@ public class ComLoginActivity extends BaseActivity {
                 .execute(new StringCallback() {
                     @Override
                     public void onError(Call call, Exception e, int id) {
+                        dialog.dismiss();
                         ToastUtils.showShort("网络出错");
                     }
 
@@ -110,6 +117,8 @@ public class ComLoginActivity extends BaseActivity {
                             ToastUtils.showShort("登录成功");
                             SpUtils.putString(getApplicationContext(),"comId",comLogin.getCompany().getId()+"");
                             ARouter.getInstance().build("/act/comact").withString("name",comLogin.getCompany().getName()).navigation();
+                            finish();
+                            dialog.dismiss();
                         }
                     }
                 });

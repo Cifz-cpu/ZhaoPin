@@ -25,8 +25,6 @@ public class CompanyAct extends BaseActivity {
     TopBarView companyTop;
     @BindView(R.id.send_job)
     Button sendJob;
-    @BindView(R.id.see_user)
-    Button seeUser;
     @BindView(R.id.see_job)
     Button seeJob;
 
@@ -43,7 +41,7 @@ public class CompanyAct extends BaseActivity {
         companyTop.setBackBtn(false);
     }
 
-    @OnClick({R.id.send_job,R.id.see_job,R.id.see_user})
+    @OnClick({R.id.send_job,R.id.see_job})
     public void click(View view){
         switch (view.getId()){
             case R.id.send_job:
@@ -51,8 +49,6 @@ public class CompanyAct extends BaseActivity {
                 break;
             case R.id.see_job:
                 ARouter.getInstance().build("/act/commyjob").navigation();
-                break;
-            case R.id.see_user:
                 break;
         }
     }

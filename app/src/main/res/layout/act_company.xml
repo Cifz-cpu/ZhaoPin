@@ -21,15 +21,6 @@
         android:textColor="@color/smssdk_black"
         android:textSize="16sp"/>
     <Button
-        android:id="@+id/see_user"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="查看申请者"
-        android:layout_marginTop="50dp"
-        android:textColor="@color/smssdk_black"
-        android:textSize="16sp"/>
-    <Button
         android:id="@+id/see_job"
         android:layout_width="150dp"
         android:layout_height="wrap_content"

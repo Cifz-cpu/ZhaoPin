@@ -1,5 +1,6 @@
 package com.lxy.zhaopin.company;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -51,6 +52,8 @@ public class ComRegistAct extends BaseActivity {
     @BindView(R.id.et_address)
     EditText etAddress;
 
+    ProgressDialog dialog;
+
     @Override
     protected int getLayoutResId() {
         return R.layout.act_comregist;
@@ -59,6 +62,11 @@ public class ComRegistAct extends BaseActivity {
     @Override
     protected void initView(Bundle bundle) {
 
+
+        dialog = new ProgressDialog(this);
+        dialog.setMessage("正在注册");
+        dialog.setCancelable(false);
+        dialog.create();
         Intent intent = getIntent();
         phone = intent.getStringExtra("comphone");
 
@@ -89,6 +97,7 @@ public class ComRegistAct extends BaseActivity {
     }
 
     private void RgistCoM(String name, String phone, String psw,String address,String desc) {
+        dialog.show();
         Map<String, String> map = new HashMap<>();
         map.put("telPhone", phone);
         map.put("password", psw);
@@ -106,6 +115,7 @@ public class ComRegistAct extends BaseActivity {
                 .execute(new StringCallback() {
                     @Override
                     public void onError(Call call, Exception e, int id) {
+                        dialog.dismiss();
                         ToastUtils.showShort("网络出错");
                     }
 
@@ -113,6 +123,7 @@ public class ComRegistAct extends BaseActivity {
                     public void onResponse(String response, int id) {
                         Gson gson = new Gson();
                         ComRegist comRegist = gson.fromJson(response, ComRegist.class);
+                        dialog.dismiss();
                         if (comRegist.getResult().getDispalyMsg().equals("success")) {
                             ToastUtils.showShort("注册成功");
                             ARouter.getInstance().build("/act/comlogin").navigation();

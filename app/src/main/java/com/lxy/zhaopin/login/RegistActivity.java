@@ -1,5 +1,6 @@
 package com.lxy.zhaopin.login;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -46,6 +47,8 @@ public class RegistActivity extends BaseActivity {
     Button btnRegist;
     String phone;
 
+    ProgressDialog dialog;
+
     @Override
     protected int getLayoutResId() {
         return R.layout.activity_regist;
@@ -53,6 +56,11 @@ public class RegistActivity extends BaseActivity {
 
     @Override
     protected void initView(Bundle bundle) {
+
+        dialog = new ProgressDialog(this);
+        dialog.setMessage("正在注册");
+        dialog.setCancelable(false);
+        dialog.create();
 
         Intent intent = getIntent();
         phone = intent.getStringExtra("phone");
@@ -74,6 +82,7 @@ public class RegistActivity extends BaseActivity {
         map.put("password",psw);
         JSONObject json = new JSONObject(map);
         String str = json.toString();
+        dialog.show();
         if(!psw.equals("")){
             OkHttpUtils
                     .postString()
@@ -84,6 +93,7 @@ public class RegistActivity extends BaseActivity {
                     .execute(new StringCallback() {
                         @Override
                         public void onError(Call call, Exception e, int id) {
+                            dialog.dismiss();
                             ToastUtils.showShort("网络错误");
                         }
 
@@ -91,9 +101,12 @@ public class RegistActivity extends BaseActivity {
                         public void onResponse(String response, int id) {
                             Gson gson = new Gson();
                             RegistBack registBack = gson.fromJson(response,RegistBack.class);
+                            dialog.dismiss();
                             if(registBack.getResult().getDispalyMsg().equals("success")){
                                 ToastUtils.showShort("注册成功");
                                 ARouter.getInstance().build("/act/login").navigation();
+                            }else{
+                                ToastUtils.showShort(registBack.getResult().getDispalyMsg());
                             }
                         }
                     });

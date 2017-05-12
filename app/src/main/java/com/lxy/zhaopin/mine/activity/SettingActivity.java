@@ -71,6 +71,9 @@ public class SettingActivity extends BaseActivity {
             case R.id.clear:
                 ToastUtils.showShort("缓存已清除");
                 break;
+            case R.id.exit:
+                ARouter.getInstance().build("/act/login").navigation();
+                break;
         }
     }
 

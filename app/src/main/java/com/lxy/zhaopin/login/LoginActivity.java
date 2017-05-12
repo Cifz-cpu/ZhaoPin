@@ -1,5 +1,6 @@
 package com.lxy.zhaopin.login;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -48,6 +49,7 @@ public class LoginActivity extends BaseActivity {
     Button btnLogin;
     @BindView(R.id.btn_regist)
     Button btnRegist;
+    ProgressDialog dialog;
 
     @Override
     protected int getLayoutResId() {
@@ -56,7 +58,10 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     protected void initView(Bundle bundle) {
-
+        dialog = new ProgressDialog(this);
+        dialog.setMessage("正在登录请稍后");
+        dialog.setCancelable(false);
+        dialog.create();
     }
 
     @OnClick({R.id.btn_login, R.id.btn_regist})
@@ -88,6 +93,7 @@ public class LoginActivity extends BaseActivity {
     }
 
     private void userLogin(String name, String psw) {
+        dialog.show();
         Map<String, String> map = new HashMap<>();
         map.put("phone", name);
         map.put("password", psw);
@@ -101,6 +107,7 @@ public class LoginActivity extends BaseActivity {
                 .execute(new StringCallback() {
                     @Override
                     public void onError(Call call, Exception e, int id) {
+                        dialog.dismiss();
                         Toast.makeText(getApplicationContext(), "登录失败", Toast.LENGTH_LONG).show();
                     }
 
@@ -113,8 +120,10 @@ public class LoginActivity extends BaseActivity {
                             SpUtils.putString(getApplicationContext(),"usernick",user.getUser().getNikeName()+"");
                             ARouter.getInstance().build("/act/main").navigation();
                             finish();
+                            dialog.dismiss();
+                            Toast.makeText(getApplicationContext(), "登录成功", Toast.LENGTH_LONG).show();
                         }
-                        Toast.makeText(getApplicationContext(), user.getResult().getDispalyMsg(), Toast.LENGTH_LONG).show();
+
                     }
                 });
     }
